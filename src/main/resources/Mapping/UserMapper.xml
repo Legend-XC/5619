@@ -1,0 +1,5 @@
+<mapper namespace="com.example.demo.Mapping.UserMapper">
+    <select id="findAll" resultType="com.example.demo.Entity.User">
+        SELECT * FROM users
+    </select>
+</mapper>
