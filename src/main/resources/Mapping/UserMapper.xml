@@ -1,5 +1,27 @@
 <mapper namespace="com.example.demo.Mapping.UserMapper">
     <select id="findAll" resultType="com.example.demo.Entity.User">
-        SELECT * FROM users
+        SELECT * FROM user
     </select>
+    <select id="findById" parameterType="int" resultType="com.example.demo.Entity.User">
+        SELECT * FROM user WHERE user_id = #{user_id}
+    </select>
+
+    <insert id="insert" parameterType="com.example.demo.Entity.User">
+        INSERT INTO user (user_id, user_name, user_password, month_limit_currency, month_limit_type)
+        VALUES (#{user_id}, #{user_name}, #{user_password}, #{month_limit_currency}, #{month_limit_type})
+    </insert>
+
+    <update id="update" parameterType="com.example.demo.Entity.User">
+        UPDATE user
+        SET user_name=#{user_name},
+        user_password=#{user_password},
+        month_limit_currency=#{month_limit_currency},
+        month_limit_type=#{month_limit_type}
+        WHERE user_id=#{user_id}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM user
+        WHERE user_id=#{user_id}
+    </delete>
 </mapper>
