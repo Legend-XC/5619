@@ -6,6 +6,7 @@ public class User {
     private String user_password;
     private double month_limit_currency;
     private String month_limit_type;
+    private String user_email;
     public User(){}
 
     public int getUser_id() {
@@ -22,6 +23,9 @@ public class User {
 
     public double getMonth_limit_currency() {
         return month_limit_currency;
+    }
+    public String getUser_email() {
+        return user_email;
     }
 
     public String getMonth_limit_type() {
@@ -46,5 +50,9 @@ public class User {
 
     public void setMonth_limit_type(String month_limit_type) {
         this.month_limit_type = month_limit_type;
+    }
+
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
     }
 }
