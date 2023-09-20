@@ -9,4 +9,9 @@ public interface UserMapper {
     void insert(User user);
     void update(User user);
     void delete(int user_id);
+
+    void updatePassword(User user, String password);
+    void updateName(User user, String user_name);
+    void updateCurrency(User user, double month_limit_currency);
+    void updateType(User user, String month_limit_type);
 }
