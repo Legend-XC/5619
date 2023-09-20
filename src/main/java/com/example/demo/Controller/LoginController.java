@@ -7,15 +7,13 @@ import org.springframework.ui.Model;
 import com.example.demo.Service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    @PostMapping("/login")
     public String login(HttpServletRequest request, Model model,
                         @RequestParam("user_id") int user_id,
                         @RequestParam("password") String password){
@@ -31,7 +29,7 @@ public class LoginController {
 
     }
 
-    @RequestMapping(value = "/logout", method= RequestMethod.GET)
+    @GetMapping("/logout")
     public String logout(HttpServletRequest request){
         HttpSession session = request.getSession(false);
         if(session != null){
