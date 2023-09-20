@@ -4,4 +4,4 @@ yarn.lock
 package-lock.json
 npm-debug.log
 .idea/
-dist/
+../src/main/resources/dist/
