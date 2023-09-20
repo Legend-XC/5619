@@ -21,4 +21,12 @@ public class UserService {
         }
         return null;
     }
+
+    public User registerUser(int user_id, String password){
+        User newUser = new User();
+        newUser.setUser_id(user_id);
+        newUser.setUser_password(password);
+        userMapper.insert(newUser);
+        return newUser;
+    }
 }
