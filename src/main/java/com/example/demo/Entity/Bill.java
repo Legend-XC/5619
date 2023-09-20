@@ -12,6 +12,8 @@ public class Bill {
     private String bill_address;
     private String bill_name;
 
+    public Bill(){}
+
     public int getUser_id() {
         return user_id;
     }
