@@ -6,10 +6,11 @@ import Dashboard from "@/pages/Dashboard.vue";
 import UserProfile from "@/pages/UserProfile.vue";
 import Notifications from "@/pages/Notifications.vue";
 import Icons from "@/pages/Icons.vue";
-import Maps from "@/pages/Maps.vue";
-import Typography from "@/pages/Typography.vue";
-import TableList from "@/pages/TableList.vue";
 import Bills from "@/pages/Bills";
+import Diversification from "@/pages/Diversification.vue";
+import Addition from "@/pages/Addition.vue";
+import TransactionRecord from "@/pages/TransactionRecord.vue";
+import BillAddition from "@/pages/BillAddition.vue";
 
 const routes = [
 
@@ -20,10 +21,9 @@ const routes = [
   },
 
   {
-    path: '/Register',
-    name: 'Register',
-    component: Register
-
+    path: "/Register",
+    name: "Register",
+    component: Register,
   },
 
   {
@@ -53,27 +53,34 @@ const routes = [
         component: Icons,
       },
       {
-        path: "maps",
-        name: "maps",
-        component: Maps,
-      },
-      {
-        path: "typography",
-        name: "typography",
-        component: Typography,
-      },
-      {
-        path: "table-list",
-        name: "table-list",
-        component: TableList,
-      },
-      {
         path: "Bills",
         name: "Bills",
         component: Bills,
-      }
+      },
+      {
+        path: "diversification",
+        name: "diversification",
+        component: Diversification,
+      },
+      {
+        path: "addition",
+        name: "addition",
+        component: Addition,
+      },
+      {
+        path: "billAddition",
+        name: "billAddition",
+        component: BillAddition,
+      },
+      {
+        path: "transactionRecord",
+        name: "transactionRecord",
+        component: TransactionRecord,
+      },
     ],
+
   },
+
   { path: "*", component: NotFound },
 ];
 
