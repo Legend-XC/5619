@@ -17,6 +17,7 @@ public class WebSecurityConfig {
                         .anyRequest().authenticated())
                 .formLogin(formLoginConfigurer -> formLoginConfigurer
                         .loginPage("/login")
+                        .loginProcessingUrl("/login")
                         .permitAll())
                 .logout(logoutConfigurer -> logoutConfigurer
                         .logoutUrl("/logout")
