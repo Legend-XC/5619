@@ -5,12 +5,12 @@
         <div class="loginbox-in">
           <div class="userbox">
             <span class="iconfont">&#xe725;</span>
-            <input  class="user" id="user"  v-model="name" placeholder="Account">
+            <input  class="user" id="user"  v-model="user_id" placeholder="Account">
           </div>
           <br>
           <div class="pwdbox">
             <span class="iconfont">&#xe72f;</span>
-            <input  class="pwd"  id="password" v-model="pwd" type="password"  placeholder="Password">
+            <input  class="pwd"  id="password" v-model="password" type="password"  placeholder="Password">
           </div>
           <button type="primary"  class="register_btn" @click="handleButtonClick">Register</button>
           <button type="button" class="login_btn" @click="loginButtonClick">Login</button>
@@ -30,6 +30,7 @@
 
 
 <script>
+import axios from 'axios'
 export default {
 
 
