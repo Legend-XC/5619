@@ -18,7 +18,8 @@ public class SecurityConfig {
                         auth.anyRequest().authenticated()
                 )
                 .formLogin(form -> {
-                    form.loginPage("/login").permitAll();
+                    form.loginPage("/login").permitAll()
+                            .defaultSuccessUrl("/home", true);;
                 })
                 .build();
     }
