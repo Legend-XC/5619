@@ -1,8 +1,12 @@
 package com.example.demo.Mapping;
 
 import com.example.demo.Entity.User;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 
+@Mapper
 public interface UserMapper {
     List<User> findAll();
     User findById(int user_id);
