@@ -43,6 +43,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'jakarta.persistence:jakarta.persistence-api:2.2.3'
+	runtimeOnly 'org.postgresql:postgresql'
 //	implementation 'org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer'
 
 }
