@@ -11,7 +11,7 @@ public class User {
     @Id
     @Column(name = "user_id", unique = true, nullable = false)
     private int user_id;
-    @Column(name = "user_name", nullable = false)
+    @Column(name = "user_name")
     private String user_name;
     @Column(name = "user_password", nullable = false)
     private String user_password;
@@ -19,7 +19,7 @@ public class User {
     private double month_limit_currency;
     @Column(name = "month_limit_type")
     private String month_limit_type;
-    @Column(name = "user_email", nullable = false)
+    @Column(name = "user_email")
     private String user_email;
     public User(){}
 
