@@ -26,6 +26,8 @@ public class UserService {
         User newUser = new User();
         newUser.setUser_id(user_id);
         newUser.setUser_password(password);
+        System.out.println(password);
+        System.out.println(newUser.getUser_password());
         newUser.setUser_name(null);
         newUser.setMonth_limit_currency(0);
         newUser.setMonth_limit_type(null);
