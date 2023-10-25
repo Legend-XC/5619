@@ -2,8 +2,8 @@
   <div>
     <h1 class="card-title">Transaction Records</h1>
     <div>
-      <input v-model="searchText" placeholder="Search by Name" class="search-input-id"></input>
-      <button @click="searchByTransactionId">Search</button>
+      <input v-model="searchName" placeholder="Search by Name" class="search-input-id"></input>
+      <button @click="searchByName">Search</button>
       <input v-model="searchStartTime" placeholder="YYYY-MM-DD" class="search-input-starttime" ></input>
       <button @click="searchByStartTime">Search</button>
     </div>
@@ -54,13 +54,13 @@ export default {
       });
     },
     searchByName(){
-      const searchText = this.searchText.toLowerCase().trim();
-      if (searchText === '') {
+      const searchName = this.searchName.toLowerCase().trim();
+      if (searchName === '') {
         this.filteredTransactions = this.transactions;
         return;
       }
       this.filteredTransactions = this.transactions.filter((transaction) => {
-        return transaction.name.toLowerCase().includes(searchText);
+        return transaction.name.toLowerCase().includes(searchName);
       });
     },
     searchByStartTime() {

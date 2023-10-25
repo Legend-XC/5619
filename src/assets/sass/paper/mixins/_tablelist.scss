@@ -21,8 +21,12 @@
 .transaction-table tbody tr:hover {
   background-color: #ddd;
 }
-
-/* 按钮样式 */
+.search-input-starttime {
+  margin-left: 400px;
+}
+.search-input-id {
+  margin-left: 50px;
+}
 button {
   padding: 5px 10px;
   background-color: #25ec97;

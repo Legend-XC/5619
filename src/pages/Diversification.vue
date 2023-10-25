@@ -57,7 +57,7 @@ export default {
           text: this.chartType === 'line' ? 'Line chart' : 'Bar chart',
         },
         series: [{
-          name: 'Weekly consumption',
+          name: 'Year consumption',
           data: [1, 2, 3, 4, 5], // 你的数据
         }],
       });

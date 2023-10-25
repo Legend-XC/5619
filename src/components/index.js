@@ -7,7 +7,7 @@ import Button from "./Button";
 import Card from "./Cards/Card.vue";
 import ChartCard from "./Cards/ChartCard.vue";
 import StatsCard from "./Cards/StatsCard.vue";
-
+import BillTable from "@/components/BillTable";
 import SidebarPlugin from "./SidebarPlugin/index";
 
 let components = {
@@ -16,6 +16,7 @@ let components = {
   ChartCard,
   StatsCard,
   PaperTable,
+  BillTable,
   DropDown,
   SidebarPlugin,
 };
@@ -28,6 +29,7 @@ export {
   ChartCard,
   StatsCard,
   PaperTable,
+  BillTable,
   DropDown,
   Button,
   SidebarPlugin,
